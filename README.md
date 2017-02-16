@@ -1,9 +1,5 @@
 # Cydia Repo
 
-[Click to directly add my repo to Cydia](cydia://source=http://repo.nickthompson.guru/ "Add my Cydia Repo")
-[Click to directly add my repo to Cydia](cydia://source=http://repo.nickthompson.guru/)
-cydia://source=http://repo.nickthompson.guru/
-
-or you can add http://repo.nickthompson.guru/
+Add http://repo.nickthompson.guru/ to Cydia.
 
 This will eventually host tweaks I make for jailbroken iOS devices.
