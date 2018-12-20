@@ -4,10 +4,10 @@ Architecture: iphoneos-arm
 Maintainer: Nick Thompson (inickt) <dev@nickthompson.guru>
 Depends: firmware (>= 9.0)
 Filename: ./debs/guru.nickthompson.lazyman-ios_1.0.1_iphoneos-arm.deb
-Size: 35093940
-MD5sum: ff3866811c08463229697f46562aeec6
-SHA1: e56664475c3c7e8c2afe24227b6995867ac516d6
-SHA256: fce582a1f71c2c2d89c32bf3bfd232a85e600678e903919c26c15aa941222b18
+Size: 53559296
+MD5sum: ef6b67af82b534fec2cc102444e297cb
+SHA1: 08b953d1f686bfd0c5f87b6f846222c52a7b3999
+SHA256: 7e4d2aad787366c4dec5ab76cbc7ee08bd4f832b8e8bd5bbb2c3e966ef571b48
 Section: Apps
 Description: A simple app that lets you stream every live and archived NHL and MLB game from any of your iOS devices for free.
 Author: Nick Thompson (inickt) <dev@nickthompson.guru>
