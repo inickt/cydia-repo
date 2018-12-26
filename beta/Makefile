@@ -1,8 +1,5 @@
 all: clean Packages Packages.bz2
 
-beta:
-	make -C beta/
-
 Packages:
 	dpkg-scanpackages -m ./debs > Packages
 
@@ -11,5 +8,3 @@ Packages.bz2: Packages
 
 clean: 
 	rm -f Packages Packages.bz2
-
-.PHONY: clean beta
