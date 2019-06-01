@@ -3,7 +3,7 @@ BUILD_DIR = ./build
 
 all: clean gh-pages
 
-clean: 
+clean:
 	rm -rf repo repo-beta $(BUILD_DIR)
 
 repo repo-beta:
@@ -29,3 +29,4 @@ gh-pages: build-repo build-repo-beta
 	cp _config.yml index.html $(BUILD_DIR)
 
 .PHONY: clean repo repo-beta
+

@@ -1,10 +1,6 @@
 dist: xenial
 language: minimal
-addons:
-  apt:
-    packages:
-    - dpkg-dev
-jobs:  
+jobs:
   include:
     - name: "Build Cydia Repos"
       script: "make"
