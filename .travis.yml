@@ -1,0 +1,19 @@
+dist: xenial
+language: minimal
+addons:
+  apt:
+    packages:
+    - dpkg-dev
+jobs:  
+  include:
+    - name: "Build Cydia Repos"
+      script: "make"
+      deploy:
+        provider: pages
+        skip_cleanup: true
+        github_token: $GITHUB_TOKEN
+        keep_history: false
+        local_dir: build
+        email: bot@nickt.dev
+        on:
+          branch: master

@@ -1,2 +1,5 @@
 *.db
 _site/
+build/
+repo/
+repo-beta/

@@ -1,23 +1,31 @@
-all: clean Packages Packages.bz2 Packages.gz
+SHELL = /bin/bash
+BUILD_DIR = ./build
 
-update: all
-	git add debs/ Packages Packages.bz2 Packages.gz
-	git commit -m "Repo Package Update"
-	git push
-
-beta:
-	make -C beta/
-
-Packages:
-	dpkg-scanpackages -m ./debs > Packages
-
-Packages.bz2: Packages
-	bzip2 -fk Packages
-
-Packages.gz: Packages
-	gzip -fk Packages
+all: clean gh-pages
 
 clean: 
-	rm -f Packages Packages.bz2 Packages.gz
+	rm -rf repo repo-beta $(BUILD_DIR)
 
-.PHONY: clean beta
+repo repo-beta:
+	rm -rf $@
+	mkdir -p ./$@/debs/
+	cp ./debs/* ./$@/debs/ || :
+	@if [ $@ == "repo-beta" ]; then cp ./debs-beta/* ./$@/debs/ || :; fi
+	cd $@; dpkg-scanpackages -m ./debs/ > Packages
+	bzip2 -fk $@/Packages
+	gzip -fk $@/Packages
+
+build-repo: repo
+	mkdir -p $(BUILD_DIR)
+	cp -r CydiaIcon.png Release ./repo/* $(BUILD_DIR)
+
+build-repo-beta: repo-beta
+	mkdir -p $(BUILD_DIR)/beta/
+	cp CydiaIcon-beta.png $(BUILD_DIR)/beta/CydiaIcon.png
+	cp Release-beta $(BUILD_DIR)/beta/Release
+	cp -r ./repo-beta/* $(BUILD_DIR)/beta/
+
+gh-pages: build-repo build-repo-beta
+	cp _config.yml index.html $(BUILD_DIR)
+
+.PHONY: clean repo repo-beta

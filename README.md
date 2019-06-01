@@ -1,5 +1,3 @@
 # Cydia Repo
 
-Add http://repo.nickthompson.guru/ to Cydia.
-
-This will eventually host tweaks I make for jailbroken iOS devices.
+Add https://repo.nickt.dev/ to Cydia or https://repo.nickt.dev/beta/ for the beta repository..
