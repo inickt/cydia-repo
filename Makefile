@@ -26,7 +26,7 @@ build-repo-beta: repo-beta
 	cp -r ./repo-beta/* $(BUILD_DIR)/beta/
 
 gh-pages: build-repo build-repo-beta
-	cp _config.yml index.html $(BUILD_DIR)
+	cp CNAME _config.yml index.html $(BUILD_DIR)
 
 .PHONY: clean repo repo-beta
 
