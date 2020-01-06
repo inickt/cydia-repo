@@ -1,0 +1,8 @@
+Origin: Nick's Beta Repo
+Label: Nick's Beta Repo
+Suite: beta
+Version: 1.0
+Codename: ios
+Architectures: iphoneos-arm
+Components: main
+Description: A collection of Nick's beta apps and tweaks.
